@@ -3,6 +3,12 @@
 
 :root {
     --main-blue: #0891B2;
+    --project-red: #9E1C1C;
+    --project-purple: #7C75CA;
+    --project-green: #5E8F4D;
+    --project-pink: #C363B4;
+    --project-orange: #D88F39;
+    --project-blue: #4BA2D2;
 }
 
 body {
@@ -12,6 +18,50 @@ body {
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
 }
+
+/* Sets a standard size for icons */
+.icons {
+    width: 32px;
+    height: auto;
+}
+
+.screenshot {
+    /* Width/height will need to be adjusted for responsiveness */
+    width: 300px; 
+    height: 300px;
+    border: 1px solid black;
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.screenshot-one {
+    background-color: var(--project-red);
+}
+
+.screenshot-two {
+    background-color: var(--project-purple);
+}
+
+.screenshot-three {
+    background-color: var(--project-green);
+}
+
+.screenshot-four {
+    background-color: var(--project-pink);
+}
+
+.screenshot-five {
+    background-color: var(--project-orange);
+}
+
+.screenshot-six {
+    background-color: var(--project-blue);
+}
+
 
 footer {
     background-color: var(--main-blue);
