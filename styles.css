@@ -2,14 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --main-blue: #0891B2;
+    --main-blue: #057d9b;
     --project-red: #9E1C1C;
     --project-purple: #7C75CA;
     --project-green: #5E8F4D;
     --project-pink: #C363B4;
-    --project-orange: #D88F39;
-    --project-blue: #4BA2D2;
+    --project-orange: #be7d33;
+    --project-blue: #418cb5;
 }
+
+/*     --project-orange: #D88F39;
+    --project-blue: #4BA2D2; */
 
 body {
     font-family: "Roboto", serif;
