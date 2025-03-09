@@ -25,27 +25,73 @@ h1, h2, h3 {
     height: auto;
 }
 
+/* My Work: Grid Container */
 .work-container {
     display: grid;
     /* Three columns on desktop */
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: center;
+    gap: 32px;
 }
 
+/* Grid Boxes */
+.work-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+/* Placeholder for an image */
 .screenshot {
-    /* Width/height will need to be adjusted for responsiveness */
-    width: 300px; 
+    /* height will need to be adjusted for responsiveness */
     height: 300px;
 
-    border: 1px solid black;
+    /* Placeholder text properties: Delete when swapping for an image */
     font-size: 32px;
     color: white;
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 
 }
 
+
+
+.project-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+/* --------------------------------------------------------------- */
+
+/* MEDIA QUERIES: */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .work-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 600px) {
+    .work-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+/* --------------------------------------------------------------- */
+
+/* PLACEHOLDER BACKGROUND COLORS */
+
+/* These styles can be deleted when swapping out for photos */
 .screenshot-one {
     background-color: var(--project-red);
 }
@@ -68,33 +114,4 @@ h1, h2, h3 {
 
 .screenshot-six {
     background-color: var(--project-blue);
-}
-
-.project-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.project-name {
-    width: 300px;
-}
-
-footer {
-    background-color: var(--main-blue);
-    color: white;
-}
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .work-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-    .work-container {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
 }
