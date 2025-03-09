@@ -25,10 +25,18 @@ h1, h2, h3 {
     height: auto;
 }
 
+.work-container {
+    display: grid;
+    /* Three columns on desktop */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+}
+
 .screenshot {
     /* Width/height will need to be adjusted for responsiveness */
     width: 300px; 
     height: 300px;
+
     border: 1px solid black;
     font-size: 32px;
     color: white;
@@ -68,7 +76,25 @@ h1, h2, h3 {
     align-items: center;
 }
 
+.project-name {
+    width: 300px;
+}
+
 footer {
     background-color: var(--main-blue);
     color: white;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .work-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .work-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
