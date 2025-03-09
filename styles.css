@@ -11,9 +11,6 @@
     --project-blue: #418cb5;
 }
 
-/*     --project-orange: #D88F39;
-    --project-blue: #4BA2D2; */
-
 body {
     font-family: "Roboto", serif;
 }
@@ -65,6 +62,11 @@ h1, h2, h3 {
     background-color: var(--project-blue);
 }
 
+.project-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 footer {
     background-color: var(--main-blue);
