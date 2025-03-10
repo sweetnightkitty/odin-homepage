@@ -9,7 +9,9 @@
     --project-pink: #C363B4;
     --project-orange: #be7d33;
     --project-blue: #418cb5;
-    --desktop-padding-sides: 0px 32px;
+    --desktop-padding-sides: 0 200px;
+    --tablet-padding-sides: 0 75px;
+    --mobile-padding-sides: 0 24px;
 }
 
 body {
@@ -26,17 +28,22 @@ h1, h2, h3 {
     height: auto;
 }
 
-    /* My Work section */
-    main {
-        padding: var(--desktop-padding-sides);
-    }
+header {
+    padding: var(--desktop-padding-sides);
+}
+/* My Work section */
+main {
+    padding: var(--desktop-padding-sides);
+    margin-bottom: 48px;
+}
 
 /* My Work: Grid Container */
 .work-container {
     display: grid;
     /* Three columns on desktop */
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px;
+    column-gap: 32px;
+    row-gap: 48px;
 }
 
 /* Grid Boxes */
@@ -53,15 +60,17 @@ h1, h2, h3 {
 
 /* Placeholder for an image */
 .screenshot {
-    /* height will need to be adjusted for responsiveness */
-    height: 300px;
+    aspect-ratio: 1/1;
 
     /* Placeholder text properties: Delete when swapping for an image */
     font-size: 32px;
+    font-family: "Playfair Display", serif;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 0 8px;
 
 }
 
@@ -85,24 +94,43 @@ footer {
 
 /* TABLET */
 @media (max-width: 1024px) {
+    header {
+        padding: var(--tablet-padding-sides);
+    }
     /* My Work section */
     main {
-        margin: 0 16px;
+        padding: var(--tablet-padding-sides);
     }
 
     /* Set grid columns to 2 */
     .work-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    footer {
+        padding: var(--tablet-padding-sides);
+    }
 }
 
 
 /* PHONE */
 @media (max-width: 600px) {
+    header {
+        padding: var(--mobile-padding-sides);
+    }
+    main {
+        padding: var(--mobile-padding-sides);
+    }
+
     /* Set grid columns to 1 */
     .work-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
+    footer {
+        padding: var(--mobile-padding-sides);
+    }
+
 }
 
 /* --------------------------------------------------------------- */
