@@ -128,6 +128,7 @@ main {
 
 
 footer {
+    margin: 0;
     background-color: var(--main-blue);
     color: white;
     padding: 0 var(--desktop-padding-sides);
@@ -188,7 +189,13 @@ footer picture img {
     }
 
     footer {
-        padding: 0 var(--tablet-padding-sides);
+        padding-right: var(--tablet-padding-sides);
+        padding-left: var(--tablet-padding-sides);
+    }
+
+    footer picture img {
+        /* Current editing left off */
+        max-width: 300px;
     }
 }
 
@@ -196,6 +203,9 @@ footer picture img {
 /* PHONE */
 @media (max-width: 600px) {
     header {
+        padding: 0 var(--mobile-padding-sides);
+    }
+    .header-content {
         padding: 0 var(--mobile-padding-sides);
     }
     main {
@@ -208,7 +218,22 @@ footer picture img {
     }
 
     footer {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    footer section {
         padding: 0 var(--mobile-padding-sides);
+    }
+
+    .footer-links {
+        padding-bottom: 48px;
+        justify-content: center;
+    }
+
+    footer picture {
+        display: flex;
+        justify-content: center;
     }
 
     /* Contact Me text style adjustment only for phone */
