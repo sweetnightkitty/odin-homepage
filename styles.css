@@ -17,6 +17,8 @@
 
 body {
     font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3 {
@@ -31,6 +33,14 @@ h1, h2, h3 {
 
 header {
     padding: 0 var(--desktop-padding-sides);
+}
+
+.header-art {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0% 100%);
+    background-color: var(--main-blue);
+    width: 200%;
+	margin: 0 auto;
+	height: 400px
 }
 /* My Work section */
 main {
@@ -129,6 +139,11 @@ footer {
 
     footer {
         padding: 0 var(--mobile-padding-sides);
+    }
+
+    /* Contact Me text style adjustment only for phone */
+    footer h2 {
+        text-align: center;
     }
 
 }
