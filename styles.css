@@ -9,9 +9,10 @@
     --project-pink: #C363B4;
     --project-orange: #be7d33;
     --project-blue: #418cb5;
-    --desktop-padding-sides: 0 200px;
+    --desktop-padding-sides: 200px;
     --tablet-padding-sides: 0 75px;
     --mobile-padding-sides: 0 24px;
+    --temp-padding: 200px;
 }
 
 body {
@@ -29,12 +30,11 @@ h1, h2, h3 {
 }
 
 header {
-    padding: var(--desktop-padding-sides);
+    padding: 0 var(--desktop-padding-sides);
 }
 /* My Work section */
 main {
-    padding: var(--desktop-padding-sides);
-    margin-bottom: 48px;
+    padding: 48px var(--desktop-padding-sides);
 }
 
 /* My Work: Grid Container */
@@ -50,7 +50,7 @@ main {
 .work-box {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    box-shadow: 0px 6px 8px #E1E2E3;
 }
 
 /* Project Title and Description */
@@ -85,7 +85,7 @@ main {
 footer {
     background-color: var(--main-blue);
     color: white;
-    padding: var(--desktop-padding-sides);
+    padding: 0 var(--desktop-padding-sides);
 }
 
 /* --------------------------------------------------------------- */
