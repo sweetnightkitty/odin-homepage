@@ -31,16 +31,33 @@ h1, h2, h3 {
     height: auto;
 }
 
-header {
-    padding: 0 var(--desktop-padding-sides);
-}
 
 .header-art {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0% 100%);
     background-color: var(--main-blue);
-    width: 200%;
+    width: 100vw;
 	margin: 0 auto;
-	height: 400px
+	height: 400px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.header-content {
+    display: flex;
+    padding: 0 var(--desktop-padding-sides);
+    margin-top: 52px;
+}
+
+.about-me {
+    padding: 0 24px;
+    background-color: white;
+}
+
+.header-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
 }
 /* My Work section */
 main {
