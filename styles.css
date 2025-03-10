@@ -10,9 +10,9 @@
     --project-orange: #be7d33;
     --project-blue: #418cb5;
     --desktop-padding-sides: 200px;
-    --tablet-padding-sides: 0 75px;
-    --mobile-padding-sides: 0 24px;
-    --temp-padding: 200px;
+    --tablet-padding-sides: 75px;
+    --mobile-padding-sides: 24px;
+    --main-padding-top-bottom: 48px;
 }
 
 body {
@@ -34,7 +34,7 @@ header {
 }
 /* My Work section */
 main {
-    padding: 48px var(--desktop-padding-sides);
+    padding: var(--main-padding-top-bottom) var(--desktop-padding-sides);
 }
 
 /* My Work: Grid Container */
@@ -95,11 +95,11 @@ footer {
 /* TABLET */
 @media (max-width: 1024px) {
     header {
-        padding: var(--tablet-padding-sides);
+        padding: 0 var(--tablet-padding-sides);
     }
     /* My Work section */
     main {
-        padding: var(--tablet-padding-sides);
+        padding: var(--main-padding-top-bottom) var(--tablet-padding-sides);
     }
 
     /* Set grid columns to 2 */
@@ -108,7 +108,7 @@ footer {
     }
 
     footer {
-        padding: var(--tablet-padding-sides);
+        padding: 0 var(--tablet-padding-sides);
     }
 }
 
@@ -116,10 +116,10 @@ footer {
 /* PHONE */
 @media (max-width: 600px) {
     header {
-        padding: var(--mobile-padding-sides);
+        padding: 0 var(--mobile-padding-sides);
     }
     main {
-        padding: var(--mobile-padding-sides);
+        padding: var(--main-padding-top-bottom) var(--mobile-padding-sides);
     }
 
     /* Set grid columns to 1 */
@@ -128,7 +128,7 @@ footer {
     }
 
     footer {
-        padding: var(--mobile-padding-sides);
+        padding: 0 var(--mobile-padding-sides);
     }
 
 }
