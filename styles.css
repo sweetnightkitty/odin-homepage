@@ -25,6 +25,10 @@ h1, h2, h3 {
     font-family: "Playfair Display", serif;
 }
 
+h2 {
+    font-size: 42px;
+}
+
 /* Sets a standard size for icons */
 .icons {
     width: 32px;
@@ -127,6 +131,41 @@ footer {
     background-color: var(--main-blue);
     color: white;
     padding: 0 var(--desktop-padding-sides);
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.contact {
+    margin-top: 0;
+}
+
+footer section {
+    padding-right: 48px;
+}
+
+.contact-msg, .address, .phone {
+    padding-bottom: 20px;
+}
+
+.email {
+    padding-bottom: 32px;
+}
+
+picture {
+    display: flex;
+    align-items: center;
+}
+footer picture img {
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
 }
 
 /* --------------------------------------------------------------- */
