@@ -49,9 +49,23 @@ h1, h2, h3 {
     margin-top: 52px;
 }
 
+.name > h1 {
+    position: absolute;
+    color: white;
+    top: 420px;
+    left: 230px;
+    font-size: 32px;
+}
+.header-image {
+    width: 300px;
+    height: auto;
+}
+
 .about-me {
+    margin-top: 24px;
     padding: 0 24px;
     background-color: white;
+    box-shadow: 5px 6px 8px #E1E2E3;
 }
 
 .header-links {
