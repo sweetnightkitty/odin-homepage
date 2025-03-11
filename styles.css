@@ -11,7 +11,7 @@
     --project-blue: #418cb5;
     --desktop-padding-sides: 200px;
     --tablet-padding-sides: 75px;
-    --mobile-padding-sides: 24px;
+    --mobile-padding-sides: 32px;
     --main-padding-top-bottom: 48px;
 }
 
@@ -36,7 +36,7 @@ h2 {
 }
 
 
-.header-art {
+/* .header-art {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0% 100%);
     background-color: var(--main-blue);
     width: 100vw;
@@ -45,7 +45,7 @@ h2 {
     position: absolute;
     top: 0;
     z-index: -1;
-}
+} */
 
 .header-content {
     display: flex;
@@ -60,10 +60,7 @@ h2 {
     left: 230px;
     font-size: 32px;
 }
-.header-image {
-    width: 300px;
-    height: auto;
-}
+
 
 .about-me {
     margin-top: 24px;
@@ -86,7 +83,7 @@ main {
 .work-container {
     display: grid;
     /* Three columns on desktop */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     column-gap: 32px;
     row-gap: 48px;
 }
@@ -169,6 +166,11 @@ footer picture img {
     gap: 16px;
 }
 
+/* temp */
+.header-image {
+    max-width: 50px;
+}
+
 /* --------------------------------------------------------------- */
 
 /* MEDIA QUERIES: */
@@ -195,7 +197,7 @@ footer picture img {
 
     footer picture img {
         /* Current editing left off */
-        max-width: 300px;
+        max-width: 300px; */
     }
 }
 
@@ -217,22 +219,26 @@ footer picture img {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
+    .screenshot {
+        aspect-ratio: 1.8/1;
+    }
+
     footer {
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0;
     }
 
     footer section {
         padding: 0 var(--mobile-padding-sides);
     }
 
-    .footer-links {
-        padding-bottom: 48px;
-        justify-content: center;
+    .contact {
+        margin-top: 24px;
     }
 
-    footer picture {
-        display: flex;
+    .footer-links {
+        padding-bottom: 48px;
         justify-content: center;
     }
 
@@ -241,6 +247,9 @@ footer picture img {
         text-align: center;
     }
 
+    footer picture img {
+        max-width: 100vw;
+    }
 }
 
 /* --------------------------------------------------------------- */
