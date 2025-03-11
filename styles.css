@@ -241,8 +241,11 @@ main, footer, .header-content {
     .contact-msg, .address, .phone {
         min-width: 225px;
     }
+    .header-art {
+        left: 0;
+    }
 
-    main, footer {
+    main, footer, header {
         padding-left: clamp(24px, 5vw, 75px);
         padding-right: clamp(24px, 5vw, 75px);
     }
@@ -252,10 +255,43 @@ main, footer, .header-content {
 /* PHONE */
 @media (max-width: 600px) {
     header {
-        padding: 0 var(--mobile-padding-sides);
+        padding-left: clamp(24px, 5vw, 32px);
+        padding-right: clamp(24px, 5vw, 32px);
+
     }
     .header-content {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .name {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    header picture {
+        display: flex;
+        min-width: 0;
+    }
+
+    header picture img {
+        min-width: 0;
+        max-width: 400px;
+        flex-shrink: 1;
+    }
+
+    .about-me {
+        box-shadow: none;
         padding: 0 var(--mobile-padding-sides);
+    }
+
+    h2 {
+        text-align: center
+    }
+
+    .header-links {
+        justify-content: center;
+        padding-top: 24px;
     }
     main {
         padding: var(--main-padding-top-bottom) var(--mobile-padding-sides);
