@@ -177,6 +177,16 @@ footer section {
     padding-bottom: 32px;
 }
 
+.email, .phone {
+    display: flex;
+    gap: 6px;
+}
+.email-icon, .phone-icon {
+    fill: white;
+    width: 24px;
+    height: auto;
+}
+
 picture {
     display: flex;
     align-items: center;
