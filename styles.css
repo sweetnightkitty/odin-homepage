@@ -60,10 +60,19 @@ header picture img {
     max-width: 400px;
 }
 
+.name {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+}
 .name > h1 {
-    /* color: white; */
-    font-size: 32px;
-    display: none;
+    position: absolute;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 3px #979b9e;;
+    
 }
 
 header h2 {
