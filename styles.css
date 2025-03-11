@@ -35,44 +35,59 @@ h2 {
     height: auto;
 }
 
+header {
+    margin-top: 52px;
+}
 
-/* .header-art {
+.header-art {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0% 100%);
     background-color: var(--main-blue);
     width: 100vw;
 	margin: 0 auto;
-	height: 400px;
+	height: 550px;
     position: absolute;
     top: 0;
     z-index: -1;
-} */
+}
 
 .header-content {
     display: flex;
     padding: 0 var(--desktop-padding-sides);
-    margin-top: 52px;
+    align-items: center;
+}
+
+header picture img {
+    max-width: 400px;
 }
 
 .name > h1 {
-    position: absolute;
-    color: white;
-    top: 420px;
-    left: 230px;
+    /* color: white; */
     font-size: 32px;
+    display: none;
 }
 
+header h2 {
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
 
 .about-me {
-    margin-top: 24px;
+    padding-top: 24px;
     padding: 0 24px;
     background-color: white;
     box-shadow: 5px 6px 8px #E1E2E3;
+}
+
+.about-me > p {
+    font-size: 18px;
 }
 
 .header-links {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
+    padding: 48px 0 24px;
 }
 /* My Work section */
 main {
@@ -173,7 +188,7 @@ footer picture img {
 }
 
 /* This gives butter smooth margin shrinking */
-main, footer {
+main, footer, .header-content {
     padding-right: clamp(24px, 10vw, 200px);
     padding-left: clamp(24px, 10vw, 200px);
 }
