@@ -146,6 +146,7 @@ footer section {
 
 .contact-msg, .address, .phone {
     padding-bottom: 20px;
+    min-width: 225px;
 }
 
 .email {
@@ -157,7 +158,7 @@ picture {
     align-items: center;
 }
 footer picture img {
-    max-width: 400px;
+    max-width: 550px;
 }
 
 .footer-links {
@@ -169,6 +170,12 @@ footer picture img {
 /* temp */
 .header-image {
     max-width: 50px;
+}
+
+/* This gives butter smooth margin shrinking */
+main, footer {
+    padding-right: clamp(24px, 10vw, 200px);
+    padding-left: clamp(24px, 10vw, 200px);
 }
 
 /* --------------------------------------------------------------- */
@@ -195,9 +202,25 @@ footer picture img {
         padding-left: var(--tablet-padding-sides);
     }
 
+    footer picture {
+        justify-content: space-between;
+        min-width: 0;
+    }
+
     footer picture img {
         /* Current editing left off */
-        max-width: 300px; */
+        flex-shrink: 1;
+        min-width: 0;
+        max-width: 400px;
+    }
+
+    .contact-msg, .address, .phone {
+        min-width: 225px;
+    }
+
+    main, footer {
+        padding-left: clamp(24px, 5vw, 75px);
+        padding-right: clamp(24px, 5vw, 75px);
     }
 }
 
