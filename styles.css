@@ -279,6 +279,15 @@ footer picture img {
 /* ||TABLET STYLES */
 @media (max-width: 1024px) {
 
+    .header-content:last-child {
+        flex-shrink: 1;
+        display: flex;
+    }
+
+    h1 {
+        padding-left: 16px
+    }
+
     /* ||TABLET PADDING & GRID */
 
     main, footer, .header-content {
@@ -296,7 +305,8 @@ footer picture img {
     /* TABLET HEADER & FOOTER IMAGES */
 
     header picture img {
-        max-width: 350px;
+        max-width: 250px;
+        flex-shrink: 1;
     }
 
     footer picture {
@@ -318,6 +328,10 @@ footer picture img {
 /* ||MOBILE STYLES*/
 @media (max-width: 600px) {
 
+    h1 {
+        font-size: 36px;
+    }
+
     /* Center titles */
     h2 {
         text-align: center
@@ -338,6 +352,12 @@ footer picture img {
     .header-content {
         padding: 0;
         flex-direction: column;
+        gap: 24px;
+    }
+
+    .header-content:first-child {
+        padding-left: clamp(24px, 5vw, 32px);
+        padding-right: clamp(24px, 5vw, 32px);
     }
 
     .name {
@@ -349,7 +369,7 @@ footer picture img {
         padding-left: 32px;
         padding-right: 32px;
     }
-    
+
     /* Convert footer into a single column */
     footer {
         display: grid;
@@ -392,10 +412,11 @@ footer picture img {
 
     header picture {
         display: flex;
-        min-width: 0;
+        max-width: calc(100vw - clamp(48px, 5vw, 64px));
     }
 
     header picture img {
+        padding-top: 24px;
         min-width: 0;
         max-width: 400px;
         flex-shrink: 1;
