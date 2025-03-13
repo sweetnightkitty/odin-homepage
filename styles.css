@@ -1,6 +1,7 @@
-
+/* ||GOOGLE FONTS:  */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ||CUSTOM COLORS & UNIVERSAL PADDING */
 :root {
     --main-blue: #057d9b;
     --project-red: #9E1C1C;
@@ -15,6 +16,9 @@
     --main-padding-top-bottom: 48px;
 }
 
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||GENERAL STYLES */
 body {
     font-family: "Roboto", serif;
     margin: 0;
@@ -23,6 +27,15 @@ body {
 
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
+}
+
+h1 {
+    position: absolute;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 3px #979b9e;;
+    
 }
 
 h2 {
@@ -35,10 +48,60 @@ h2 {
     height: auto;
 }
 
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||HEADER STYLES */
+
 header {
     margin-top: 52px;
 }
 
+
+/* All header content except for the blue accent */
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Contains both h1 (name), and the header photo */
+.name {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* White about me box including links */
+.about-me {
+    padding-top: 24px;
+    padding: 0 24px;
+    background-color: white;
+    box-shadow: 5px 6px 8px #E1E2E3;
+}
+
+.about-me h2 {
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.about-me > p {
+    font-size: 18px;
+}
+
+/* Social Media Links in the Header */
+.header-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 48px 0 24px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||HEADER ACCENT (BLUE) */
+
+/* Blue accented design behind the header content */
 .header-art {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22vw), 0% 100%);
     background-color: var(--main-blue);
@@ -47,67 +110,22 @@ header {
 	height: 550px;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: -1;
 }
 
-.header-content {
-    display: flex;
-    padding: 0 var(--desktop-padding-sides);
-    align-items: center;
-}
+/* -------------------------------------------------------------------------------------------------- */
 
-header picture img {
-    max-width: 400px;
-}
+/* ||MAIN - MY WORK  */
 
-.name {
-    display: flex;
-    position: relative;
-    align-items: flex-end;
-    justify-content: center;
-}
-.name > h1 {
-    position: absolute;
-    color: white;
-    font-size: 42px;
-    margin-bottom: 12px;
-    text-shadow: 1px 1px 3px #979b9e;;
-    
-}
-
-header h2 {
-    margin: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-.about-me {
-    padding-top: 24px;
-    padding: 0 24px;
-    background-color: white;
-    box-shadow: 5px 6px 8px #E1E2E3;
-}
-
-.about-me > p {
-    font-size: 18px;
-}
-
-.header-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    padding: 48px 0 24px;
-}
-/* My Work section */
 main {
-    padding: var(--main-padding-top-bottom) var(--desktop-padding-sides);
+    padding-top: var(--main-padding-top-bottom);
+    padding-bottom: var(--main-padding-top-bottom);
 }
 
-/* My Work: Grid Container */
+/* Grid Container */
 .work-container {
     display: grid;
-    /* Three columns on desktop */
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
     column-gap: 32px;
     row-gap: 48px;
 }
@@ -117,11 +135,6 @@ main {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 6px 8px #E1E2E3;
-}
-
-/* Project Title and Description */
-.work-box > section {
-    padding: 0px 16px;
 }
 
 /* Placeholder for an image */
@@ -137,9 +150,12 @@ main {
     justify-content: center;
     text-align: center;
     padding: 0 8px;
-
 }
 
+/* Project Name and Description */
+.work-box > section {
+    padding: 0px 16px;
+}
 
 .project-name {
     display: flex;
@@ -147,12 +163,14 @@ main {
     align-items: center;
 }
 
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||FOOTER STYLES */
 
 footer {
     margin: 0;
     background-color: var(--main-blue);
     color: white;
-    padding: 0 var(--desktop-padding-sides);
     display: flex;
     justify-content: space-between;
     font-size: 16px;
@@ -160,12 +178,13 @@ footer {
     padding-bottom: 48px;
 }
 
-.contact {
-    margin-top: 0;
-}
-
+/* All footer content except the picture */
 footer section {
     padding-right: 48px;
+}
+
+footer h2 {
+    margin-top: 0;
 }
 
 .contact-msg, .address, .phone {
@@ -177,54 +196,94 @@ footer section {
     padding-bottom: 32px;
 }
 
+/* Contains email address/phone number AND an icon */
 .email, .phone {
     display: flex;
     gap: 6px;
 }
+
 .email-icon, .phone-icon {
     fill: white;
     width: 24px;
     height: auto;
 }
 
-picture {
-    display: flex;
-    align-items: center;
-}
-footer picture img {
-    max-width: 550px;
-}
-
+/* Social Media Links in the Footer */
 .footer-links {
     display: flex;
     justify-content: flex-start;
     gap: 16px;
 }
 
-/* temp */
-.header-image {
-    max-width: 50px;
+/* --------------------------------------------------------------- */
+
+/* ||SCREENSHOT PLACEHOLDER BACKGROUND COLORS */
+
+/* These styles can be deleted when swapping out for photos */
+.screenshot-one {
+    background-color: var(--project-red);
 }
 
-/* This gives butter smooth margin shrinking */
+.screenshot-two {
+    background-color: var(--project-purple);
+}
+
+.screenshot-three {
+    background-color: var(--project-green);
+}
+
+.screenshot-four {
+    background-color: var(--project-pink);
+}
+
+.screenshot-five {
+    background-color: var(--project-orange);
+}
+
+.screenshot-six {
+    background-color: var(--project-blue);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||DESKTOP PADDING & GRID */
+
 main, footer, .header-content {
     padding-right: clamp(24px, 10vw, 200px);
     padding-left: clamp(24px, 10vw, 200px);
 }
 
-/* --------------------------------------------------------------- */
+.work-container {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+}
 
-/* MEDIA QUERIES: */
+/* -------------------------------------------------------------------------------------------------- */
 
-/* TABLET */
+/* ||DESKTOP HEADER & FOOTER IMAGES */
+
+header picture img {
+    max-width: 400px;
+}
+
+footer picture {
+    display: flex;
+    align-items: center;
+}
+
+footer picture img {
+    max-width: 550px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+/* ||TABLET STYLES */
 @media (max-width: 1024px) {
 
-    header picture img {
-        max-width: 350px;
-    }
-    /* My Work section */
-    main {
-        padding: var(--main-padding-top-bottom) var(--tablet-padding-sides);
+    /* ||TABLET PADDING & GRID */
+
+    main, footer, .header-content {
+        padding-left: clamp(24px, 5vw, 75px);
+        padding-right: clamp(24px, 5vw, 75px);
     }
 
     /* Set grid columns to 2 */
@@ -232,9 +291,12 @@ main, footer, .header-content {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    footer {
-        padding-right: var(--tablet-padding-sides);
-        padding-left: var(--tablet-padding-sides);
+    /* --------------------------------------------------------------------------------------------- */
+
+    /* TABLET HEADER & FOOTER IMAGES */
+
+    header picture img {
+        max-width: 350px;
     }
 
     footer picture {
@@ -249,22 +311,32 @@ main, footer, .header-content {
         max-width: 400px;
     }
 
-    .contact-msg, .address, .phone {
-        min-width: 225px;
-    }
-    .header-art {
-        left: 0;
-    }
-
-    main, footer, .header-content {
-        padding-left: clamp(24px, 5vw, 75px);
-        padding-right: clamp(24px, 5vw, 75px);
-    }
 }
 
+/* -------------------------------------------------------------------------------------------------- */
 
-/* PHONE */
+/* ||MOBILE STYLES*/
 @media (max-width: 600px) {
+
+    /* ||MOBILE PADDING & GRID */
+
+    /* --------------------------------------------------------------------------------------------- */
+
+    /* ||MOBILE HEADER & FOOTER IMAGES */
+
+    header picture {
+        display: flex;
+        min-width: 0;
+    }
+
+    header picture img {
+        min-width: 0;
+        max-width: 400px;
+        flex-shrink: 1;
+    }
+
+    /* --------------------------------------------------------------------------------------------- */
+
     header {
         padding-left: clamp(24px, 5vw, 32px);
         padding-right: clamp(24px, 5vw, 32px);
@@ -278,17 +350,6 @@ main, footer, .header-content {
     .name {
         padding-left: 32px;
         padding-right: 32px;
-    }
-
-    header picture {
-        display: flex;
-        min-width: 0;
-    }
-
-    header picture img {
-        min-width: 0;
-        max-width: 400px;
-        flex-shrink: 1;
     }
 
     .about-me {
@@ -346,31 +407,3 @@ main, footer, .header-content {
     }
 }
 
-/* --------------------------------------------------------------- */
-
-/* PLACEHOLDER BACKGROUND COLORS */
-
-/* These styles can be deleted when swapping out for photos */
-.screenshot-one {
-    background-color: var(--project-red);
-}
-
-.screenshot-two {
-    background-color: var(--project-purple);
-}
-
-.screenshot-three {
-    background-color: var(--project-green);
-}
-
-.screenshot-four {
-    background-color: var(--project-pink);
-}
-
-.screenshot-five {
-    background-color: var(--project-orange);
-}
-
-.screenshot-six {
-    background-color: var(--project-blue);
-}
